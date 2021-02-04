@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <script type="text/javascript">
+    // Facebook
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '688264261262130');
+    fbq('track', 'Redirect');
+    fbq('track', 'PageView');
+
+    var url = "{{ page.redirect.to }}";
+    if(typeof IE_fix != "undefined") // IE8 and lower fix to pass the http referer
+    {
+      document.write("redirecting..."); // Don't remove this line or appendChild() will fail because it is called before document.onload to make the redirect as fast as possible. Nobody will see this text, it is only a tech fix.
+      var referLink = document.createElement("a");
+      referLink.href = url;
+      document.body.appendChild(referLink);
+      referLink.click();
+    }
+    else { window.location.replace(url); } // All other browsers
+  </script>
+  <meta charset="utf-8">
+  <title>{{ site.title }} + {{ page.title }}</title>
+  <link rel="canonical" href="{{ page.redirect.to }}">
+  <meta name="robots" content="noindex">
+  <noscript>
+    <meta http-equiv="refresh" content="0; url={{ page.redirect.to }}">
+    <h1>{{ site.title }} + {{ page.title }}</h1>
+    <a href="{{ page.redirect.to }}">Redirecting you to {{ site.title }} + {{ page.title }}...</a>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=688264261262130&ev=Redirect&noscript=1" />
+  </noscript>
+</html>

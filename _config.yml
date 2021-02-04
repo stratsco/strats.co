@@ -13,6 +13,9 @@ collections:
   games:
     output: true
     permalink: /game/:slug
+  redirects:
+    output: true
+    permalink: /:slug
 
 defaults:
   -
@@ -38,6 +41,13 @@ defaults:
       type: "games"
     values:
       layout: "game"
+  -
+    scope:
+      path: ""
+      type: "redirects"
+    values:
+      layout: "redirect"
+  
 
 markdown: kramdown
 
@@ -51,7 +61,8 @@ sass:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 paginate: 6
-paginate_path: "/blog/page:num/"
+paginate_path: "/news/page:num/"
   
