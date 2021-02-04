@@ -9,14 +9,14 @@ header_settings:
 
 menu_settings:
   menu_items:
-    - title: 'Projects'
+    - title: 'Games'
       url: '/'
-    - title: 'Blog'
-      url: '/blog/'
+    - title: 'News'
+      url: '/news/'
     - title: 'About'
       url: '/about'
-    - title: 'Contact'
-      url: '/contact'
+    - title: 'Discord'
+      url: '/discord'
 
 grid_settings:
   overlay_opacity: 0.8
@@ -29,11 +29,11 @@ contact_settings:
   send_button_text: 'Send Message'
 
 social_settings:
-  facebook_url: ''
-  twitter_url: ''
+  facebook_url: 'https://facebook.com/stratsco'
+  twitter_url: 'https://twitter.com/stratsco'
   instagram_url: ''
   snapchat_url: ''
-  youtube_url: ''
+  youtube_url: 'https://youtube.com/stratsco'
   google-plus_url: ''
   vimeo_url: ''
   pinterest_url: ''

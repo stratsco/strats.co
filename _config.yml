@@ -1,6 +1,6 @@
-site: Index Jekyll Theme
+site: StratsCo
 
-url: https://index.jekyllthemes.io
+url: https://strats.co
 baseurl: 
 
 collections:
@@ -9,10 +9,10 @@ collections:
     permalink: /:name
   posts:
     output: true
-    permalink: /blog/:slug
-  projects:
+    permalink: /news/:slug
+  games:
     output: true
-    permalink: /project/:slug
+    permalink: /game/:slug
 
 defaults:
   -
@@ -35,9 +35,9 @@ defaults:
   -
     scope:
       path: ""
-      type: "projects"
+      type: "games"
     values:
-      layout: "project"
+      layout: "game"
 
 markdown: kramdown
 
