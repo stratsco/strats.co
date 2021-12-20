@@ -15,8 +15,8 @@ menu_settings:
       url: '/news/'
     - title: 'About Us'
       url: '/about'
-    - title: 'Join Discord'
-      url: '/discord'
+    # - title: 'Join Discord'
+    #   url: '/discord'
 
 grid_settings:
   overlay_opacity: 0.8
@@ -62,9 +62,9 @@ color_settings:
   text_dark_color: '#eee'
   text_medium_color: '#999'
   text_light_color: '#ccc'
-  accent_color: '#3c9'
-  border_color: '#000'
-  overlay_background_color: '#3c9'
+  accent_color: '#0fa'
+  border_color: '#111'
+  overlay_background_color: '#0fa'
   overlay_text_color: '#111'
   overlay_accent_color: '#fff'
   error_color: '#c00'

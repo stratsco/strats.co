@@ -1,9 +1,9 @@
 ---
-title: 'World of Warcraft'
+title: 'Overwatch'
 subtitle: 'This is a demo'
 date: 2018-06-30 00:00:00
 description: This page is a demo that shows everything you can do inside portfolio and blog posts.
-featured_image: '/images/games/worldofwarcraft.png'
+featured_image: '/images/games/overwatch.jpg'
 ---
 
 ![](/images/demo/demo-landscape.jpg)
