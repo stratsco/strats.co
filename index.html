@@ -1,37 +1,470 @@
----
-layout: default
-title: Multiplayer Gaming Community
-description: Since 2014, the community for people who like to play video games&mdash;usually together.
-featured_image: /images/social.jpg
----
+<!DOCTYPE html>
+<html lang="en">
 
-<section class="portfolio">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-	<div class="content-wrap portfolio-wrap">
+    <title>StratsCo - Discord community for people who love massively multiplayer games.</title>
 
-		{% for game in site.games reversed %}
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png">
 
-		<div class="portfolio-item">
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/plugins/feature.css">
+    <link rel="stylesheet" href="/css/vendor/slick.css">
+    <link rel="stylesheet" href="/css/vendor/slick-theme.css">
+    <link rel="stylesheet" href="/css/vendor/lightbox.css">
+    <link rel="stylesheet" href="/css/vendor/fontawesome.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
 
-			<a class="portfolio-item__link" href="{{ game.url | relative_url }}">
+<body>
+    <div class="active-dark">
+        <!-- start header Arae -->
+        <header class="header-area formobile-menu header--transparent default-color">
+            <div class="header-wrapper" id="header-wrapper">
+                <div class="header-left">
+                    <div class="logo"><a href="/"><img src="/images/logo/logo.png" alt="StratsCi"></a>
+                    </div>
+                </div>
+                <div class="header-right">
+                     <div class="header-btn">
+                        <a class="btn-default btn-border btn-opacity" target="_blank" href="https://discord.gg/stratsco">
+                            <span>Join Discord</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End header Arae -->
 
-				<div class="portfolio-item__image">
-					<img src="{{ game.featured_image | relative_url }}" alt="{{ game.title }}">
-				</div>
+        <!-- start Slider area -->
+        <div class="slider-wrapper">
+            <div class="slider-activation">
+                <div class="slide slide-style-1 slider-fixed--height d-flex align-items-center bg_image bg_image--1" data-black-overlay="8">
+                    <div class="container position-relative">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="inner">
+                                    <h1 class="title theme-gradient">For people who love massively multiplayer games.</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-wrapper service-white">
+                            <div class="row row--25">
+                                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                    <div class="service service__style--1">
+                                        <div class="icon">
+                                            <i data-feather="user-plus"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title">Grownup Gamers</h4>
+                                            <p>Old farts, parents, seasoned multiplayer veterans, we've been at this since the LAN.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                    <div class="service service__style--1">
+                                        <div class="icon">
+                                            <i data-feather="heart"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title">Helpful Guildmates</h4>
+                                            <p>Tolerant squads that bring others along for their journey. Learning and feedback is a gift.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                    <div class="service service__style--1">
+                                        <div class="icon">
+                                            <i data-feather="coffee"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title">Relaxed Atmosphere</h4>
+                                            <p>Haven from toxic gaming culture where it's cool to balance work, life, and hardcore raids.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end Slider Area -->
 
-				<div class="portfolio-item__content">
-					<div class="portfolio-item__info">
-						<h2 class="portfolio-item__title">{{ game.title }}</h2>
-						<p class="portfolio-item__subtitle">{{ game.subtitle }}</p>
-					</div>
-				</div>
+        <!-- Start Portfolio area -->
+        <div class="portfolio-area ptb--120 bg_color--1">
+            <div class="portfolio-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center">
+                                <span class="subtitle">Massively Multiplayer Guilds</span>
+                                <h2 class="title">Core Games We Play</h2>
+                                <p class="description">These are the primary games where StratsCo has a significant guild presence.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt--30">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt--30">
+                            <div class="im_portfolio text-center">
+                                <div class="thumbnail_inner">
+                                    <div class="thumbnail">
+                                        <a href="https://discord.gg/stratsco">
+                                            <img src="/images/games/elderscrollsonline.png" alt="Elder Scrolls Online">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="inner">
+                                        <div class="portfolio_heading">
+                                            <div class="category_list">
+                                                <a href="https://discord.gg/stratsco">NA, PC</a>
+                                            </div>
+                                            <h4 class="title">
+                                                <a href="https://discord.gg/stratsco">Elder Scrolls Online</a>
+                                            </h4>
+                                        </div>
+                                        <div class="portfolio_hover">
+                                            <p>Tri-faction social guild with an emphasis on progression trials</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="transparent_link" href="https://discord.gg/stratsco"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt--30">
+                            <div class="im_portfolio text-center">
+                                <div class="thumbnail_inner">
+                                    <div class="thumbnail">
+                                        <a href="https://discord.gg/stratsco">
+                                            <img src="/images/games/eveonline.png" alt="EVE Online">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="inner">
+                                        <div class="portfolio_heading">
+                                            <div class="category_list">
+                                                <a href="https://discord.gg/stratsco">Tranquility</a>
+                                            </div>
+                                            <h4 class="title">
+                                                <a href="https://discord.gg/stratsco">EVE Online</a>
+                                            </h4>
+                                        </div>
+                                        <div class="portfolio_hover">
+                                            <p>Operating out of a home wormhole with a variety of fleets</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="transparent_link" href="https://discord.gg/stratsco"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt--30">
+                            <div class="im_portfolio text-center">
+                                <div class="thumbnail_inner">
+                                    <div class="thumbnail">
+                                        <a href="https://discord.gg/stratsco">
+                                            <img src="/images/games/lostark.png" alt="Lost Ark">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="inner">
+                                        <div class="portfolio_heading">
+                                            <div class="category_list">
+                                                <a href="https://discord.gg/stratsco">NA, Server TBD</a>
+                                            </div>
+                                            <h4 class="title">
+                                                <a href="https://discord.gg/stratsco">Lost Ark</a>
+                                            </h4>
+                                        </div>
+                                        <div class="portfolio_hover">
+                                            <p>Hardcore guild for mains with sisters alt guilds available</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="transparent_link" href="https://discord.gg/stratsco"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Portfolio area -->
 
-			</a>
+        <!-- start Services Area -->
+        <div class="service-area ptb--120 bg_color--5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center">
+                            <span class="subtitle">Community</span>
+                            <h2 class="title">Discussion with your fellow Strategists</h2>
+                            <p class="description">Aside from the staple MMORPGs we play and outside of the guilds, <br /> members gather as a community and get to know eachother across universes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-12 mt--30">
+                        <div class="row service-main-wrapper">
 
-		</div>
+                            <!-- start single Services -->
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                    <div class="service service__style--2 text-left">
+                                        <div class="icon">
+                                            <i data-feather="monitor"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h3 class="title">Gaming</h3>
+                                            <p>Platform-agnostic gaming talk. Board games and table-top, too.</p>
+                                        </div>
+                                    </div>
+                            </div>
+                            <!-- End single Services -->
 
-		{% endfor %}
+                            <!-- start single Services -->
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                    <div class="service service__style--2 text-left">
+                                        <div class="icon">
+                                            <i data-feather="cpu"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h3 class="title">Gear</h3>
+                                            <p>All manner of hardware and non-gaming software discussion</p>
+                                        </div>
+                                    </div>
+                            </div>
+                            <!-- End single Services -->
 
-	</div>
+                            <!-- start single Services -->
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                    <div class="service service__style--2 text-left">
+                                        <div class="icon">
+                                            <i data-feather="activity"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h3 class="title">Off-Topic</h3>
+                                            <p>Off topic chatter, obv. Keep it civil and be excellent to each other.</p>
+                                        </div>
+                                    </div>
+                            </div>
+                            <!-- End single Services -->
 
-</section>
+                            <!-- start single Services -->
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                    <div class="service service__style--2 text-left">
+                                        <div class="icon">
+                                            <i data-feather="music"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h3 class="title">Music</h3>
+                                            <p>A place for strategists to share their music.</p>
+                                        </div>
+                                    </div>
+                            </div>
+                            <!-- End single Services -->
+
+                            <!-- start single Services -->
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                    <div class="service service__style--2 text-left">
+                                        <div class="icon">
+                                            <i data-feather="cast"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h3 class="title">Streaming</h3>
+                                            <p>Video streaming discussion and a bit of self-promotion.</p>
+                                        </div>
+                                    </div>
+                            </div>
+                            <!-- End single Services -->
+
+                            <!-- start single Services -->
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                    <div class="service service__style--2 text-left">
+                                        <div class="icon">
+                                            <i data-feather="user"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h3 class="title">Introductions</h3>
+                                            <p>We would love to get to know you. A great place to start!</p>
+                                        </div>
+                                    </div>
+                            </div>
+                            <!-- End single Services -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Services Area -->
+
+        <!-- start about area -->
+        <div class="about-area ptb--120 bg_color--1">
+            <div class="about-wrapper">
+                <div class="container">
+                    <div class="row row--35 align-items-center">
+                        <div class="col-lg-5 col-md-12">
+                            <div class="thumbnail">
+                                <img class="w-100" src="/images/about/about-1.png" alt="About Images">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-12">
+                            <div class="about-inner inner">
+                                <div class="section-title">
+                                    <div class="icon">
+                                        <i data-feather="award"></i>
+                                    </div>
+                                    <h2 class="title">What is StratsCo?</h2>
+                                    <p class="description">Since 2014, the community for people who play massively multiplayer games (MMOs)—usually together. We’re all about the strategy, gear, and content of gaming, with a special focus on playing MMORPGs together in good company.
+                                    <p class="description">We began as a guild in 2014 and have since traveled from one game universe to another. The rest has been an evolution of sticking together, meeting new friends, and great discussion.</p>
+                                    <div class="purchase-btn">
+                                        <a class="btn-transparent" href="https://discord.gg/stratsco">INTRODUCE YOURSELF</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End about area -->
+
+        <!-- counter up section -->
+        <div class="rn-counterup-area ptb--120 bg_color--5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center">
+                            <span class="subtitle">Trends</span>
+                            <h2 class="title">Our Community Growth</h2>
+                            <p class="description">We've steadily and thoughtfully grown since 2014.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt--30">
+                    <div class="im_single_counterup col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="im_counterup">
+                            <div class="inner">
+                                <div class="icon">
+                                    <i data-feather="trending-up"></i>
+                                </div>
+                                <h2 class="counter"><span>3000</span></h2>
+                                <p class="description">Total Strategists</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="im_single_counterup col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="im_counterup">
+                            <div class="inner">
+                                <div class="icon">
+                                    <i data-feather="zap"></i>
+                                </div>
+                                <h2 class="counter">
+                                    <span>40</span>
+                                </h2>
+                                <p class="description">Discord Boosts</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="im_single_counterup col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="im_counterup">
+                            <div class="inner">
+                                <div class="icon">
+                                    <i data-feather="award"></i>
+                                </div>
+                                <h2 class="counter"><span>30</span></h2>
+                                <p class="description">Exalted OGs</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="im_single_counterup col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="im_counterup">
+                            <div class="inner">
+                                <div class="icon">
+                                    <i data-feather="coffee"></i>
+                                </div>
+                                <h2 class="counter"><span>800</span></h2>
+                                <p class="description">Beverages Consumed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- counter up section  end-->
+
+     <!-- Start Footer Area Start -->
+     <div class="footer-style-3 pt--100 pb--30 bg_color--6">
+        <div class="wrapper">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-12">
+                    <div class="inner text-center">
+                        <div class="callto-action-area">
+                            <h2 class="title text-white mb--25">Ready to start your adventure?</h2>
+                            <div class="contact-btn"><a class="btn-default" href="https://discord.gg/stratsco">Join Discord</a></div>
+                        </div>
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="/images/logo/logo-symbol-dark.png" alt="StratsCo">
+                            </a>
+                        </div>
+                        <!-- Social icone Area -->
+                        <ul class="social-share d-flex justify-content-center liststyle">
+                            <li><a href="https://facebook.com/stratsco"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://twitch.tv/stratsco"><i class="fab fa-twitch"></i></a></li>
+                            <li><a href="https://youtube.com/stratsco"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                        <!-- End -->
+                        <div class="text mt--20">
+                            <p>&copy; StratsCo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start Footer Area End -->
+    <!-- Start Top To Bottom Area  -->
+    <div class="rn-progress-parent">
+        <svg class="rn-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- End Top To Bottom Area  -->
+
+    <!-- js  
+======================================-->
+    <!-- modernizer JS -->
+    <script src="/js/vendor/modernizer.min.js"></script>
+    <!-- jquery JS -->
+    <script src="/js/vendor/jquery.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/js/vendor/bootstrap.min.js"></script>
+
+    <script src="/js/vendor/avoid-console.js"></script>
+    <script src="/js/vendor/waypoint.js"></script>
+    <script src="/js/vendor/wow.js"></script>
+    <script src="/js/vendor/feather.js"></script>
+    <script src="/js/vendor/slick.min.js"></script>
+    <script src="/js/vendor/counterup.js"></script>
+    <script src="/js/vendor/video.js"></script>
+    <script src="/js/vendor/masonry.js"></script>
+    <script src="/js/vendor/lightbox.js"></script>
+    <script src="/js/vendor/particles.js"></script>
+    <script src="/js/vendor/backtotop.js"></script>
+
+    <!-- main JS -->
+    <script src="/js/main.js"></script>
+
+</body>
+
+</html>
