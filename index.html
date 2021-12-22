@@ -34,6 +34,9 @@
         'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '688264261262130');
         fbq('track', 'PageView');
+        $('#$joinDiscordButton').click(function() {
+            fbq('track', 'Contact');
+        });
         </script>
         <noscript><img height="1" width="1" style="display:none"
         src="https://www.facebook.com/tr?id=688264261262130&ev=PageView&noscript=1"
@@ -53,7 +56,7 @@
                 </div>
                 <div class="header-right">
                      <div class="header-btn">
-                        <a class="btn-default btn-border btn-opacity" target="_blank" href="https://discord.gg/stratsco">
+                        <a id="joinDiscordButton" class="btn-default btn-border btn-opacity" target="_blank" href="https://discord.gg/stratsco">
                             <span>Join Discord</span>
                         </a>
                     </div>
