@@ -15,7 +15,7 @@ collections:
     permalink: /game/:slug
   redirects:
     output: true
-    permalink: /:slug
+    permalink: /x/:slug
 
 defaults:
   -
