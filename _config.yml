@@ -7,16 +7,16 @@ permalink: pretty
 collections:
   pages:
     output: true
-    permalink: /:slug
+    permalink: /:slug/
   posts:
     output: true
-    permalink: /news/:slug
+    permalink: /news/:slug/
   games:
     output: true
-    permalink: /game/:slug
+    permalink: /game/:slug/
   redirects:
     output: true
-    permalink: /x/:slug
+    permalink: /x/:slug/
 
 defaults:
   -
