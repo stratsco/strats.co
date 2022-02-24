@@ -7,7 +7,7 @@ permalink: pretty
 collections:
   pages:
     output: true
-    permalink: /:name
+    permalink: /:slug
   posts:
     output: true
     permalink: /news/:slug
