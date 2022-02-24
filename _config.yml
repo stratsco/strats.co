@@ -1,7 +1,7 @@
 site: StratsCo
 
 url: https://strats.co
-baseurl: 
+baseurl: /
 permalink: pretty
 
 collections:
@@ -10,13 +10,13 @@ collections:
     permalink: /:name
   posts:
     output: true
-    permalink: /news/:slug/
+    permalink: /news/:slug
   games:
     output: true
-    permalink: /game/:slug/
+    permalink: /game/:slug
   redirects:
     output: true
-    permalink: /x/:slug/
+    permalink: /x/:slug
 
 defaults:
   -
