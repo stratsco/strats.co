@@ -2,6 +2,7 @@ site: StratsCo
 
 url: https://strats.co
 baseurl: 
+permalink: pretty
 
 collections:
   pages:
