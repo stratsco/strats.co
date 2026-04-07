@@ -1,4 +1,4 @@
-# strats.co
+# StratsCo
 
 This repository was reset in April 2026. The previous codebase was a **Jekyll** marketing site for **StratsCo**—positioned as a Discord community for people who play massively multiplayer games. It lived at [https://strats.co](https://strats.co).
 
@@ -8,6 +8,23 @@ This repository was reset in April 2026. The previous codebase was a **Jekyll** 
 - A Bootstrap-based theme with SCSS, vendor JS, and a single demo post from 2018.
 
 Nothing from that stack remains in the tree on purpose. The next iteration of this repo will define a new purpose and stack for strats.co.
+
+---
+
+## Target platform: Cloudflare
+
+The goal is to keep **strats.co** on a **Cloudflare-native** stack: TypeScript-first, edge-friendly, and cheap to run at rest.
+
+| Layer | Direction |
+|--------|-----------|
+| **Hosting** | [Cloudflare Pages](https://developers.cloudflare.com/pages/) — static assets, optional [Pages Functions](https://developers.cloudflare.com/pages/functions/) on the Workers runtime for server logic. |
+| **HTTP / API** | **[Hono](https://hono.dev/)** for small, fast routes in Functions or a dedicated Worker when we want an explicit API layer (can sit behind Pages or power a minimal backend-only Worker). |
+| **Full-stack / SSR frameworks** | Choose one when we need server-rendered HTML or file-based routing beyond a SPA: **[Astro](https://docs.astro.build/en/guides/deploy/cloudflare/)** (content + optional React islands), **[Remix](https://remix.run/docs/en/main/guides/deployment#cloudflare)** (first-class Cloudflare adapter), or **[Next.js](https://developers.cloudflare.com/workers/frameworks/framework-guides/nextjs/)** (supported via Workers build tooling; typically more moving parts than Remix/Astro on Cloudflare). |
+| **Database** | **[D1](https://developers.cloudflare.com/d1/)** for relational, serverless SQL (structured entities, joins, migrations). **[KV](https://developers.cloudflare.com/kv/)** for key-value use cases (cache, feature flags, session tokens, denormalized lookups)—not a replacement for D1 when the data model is relational. |
+| **Object storage** | **[R2](https://developers.cloudflare.com/r2/)** for S3-compatible blobs (uploads, large assets, exports); aligns with Workers/Pages via bindings and avoids classic egress billing patterns when traffic stays in the Cloudflare ecosystem. |
+| **Language** | **TypeScript** (JavaScript acceptable where tooling forces it); shared types between client and Functions where useful. |
+
+**How this fits the UI reference below:** TailAdmin is a **Vite + React** SPA. That maps cleanly to **Pages static deploy** + **Functions/Hono** for auth, forms, and data (D1/KV/R2 via bindings). If we prefer **Astro** for marketing pages, we can still reuse TailAdmin-style **React + Tailwind** as islands or a mounted app shell—same component vocabulary, different page assembly.
 
 ---
 
@@ -39,14 +56,16 @@ The local copy **TailAdmin React Pro** (`tailadmin-react-pro-2.0-main`, package 
 
 Use the **same core toolchain** so new work can reuse components, tokens, and patterns from the TailAdmin kit without a parallel stack:
 
-1. **Vite 6 + TypeScript 5.x** — build, strict compiler options in line with `tsconfig.app.json` (bundler resolution, `noUnusedLocals` / `noUnusedParameters`, etc.).
+1. **Vite 6 + TypeScript 5.x** — build, strict compiler options in line with `tsconfig.app.json` (bundler resolution, `noUnusedLocals` / `noUnusedParameters`, etc.). Prefer **current Vite / TypeScript majors** at scaffold time if they match Cloudflare’s supported runtimes (see [Workers/Pages compatibility](https://developers.cloudflare.com/workers/runtime-apis/nodejs/)).
 2. **React 19** — UI layer.
 3. **Tailwind CSS v4 + PostCSS** — styling; **@tailwindcss/forms** if we keep form-heavy UI; carry over or simplify `@theme` tokens as the brand evolves.
-4. **React Router 7** — client-side routing for a SPA (or hybrid later if we add SSR).
-5. **ESLint 9** + **typescript-eslint** + React hooks/refresh plugins — same quality bar as the template.
+4. **React Router 7** — client-side routing for a SPA (or replace with the meta framework’s router if we adopt Astro/Remix/Next).
+5. **ESLint 9** + **typescript-eslint** + React hooks/refresh plugins — same quality bar as the template (bump ESLint major when the ecosystem pins allow).
 6. **vite-plugin-svgr** — optional but already proven in the template for icon pipelines.
 7. **clsx** + **tailwind-merge** — conditional classes and Tailwind-safe merging.
-8. **react-helmet-async** — document title, meta, and social tags for public pages.
+8. **react-helmet-async** — document title, meta, and social tags for a SPA; superseded by framework meta APIs if we move to Astro/Remix/Next.
+
+**Deploy:** Build output to **Cloudflare Pages**; APIs and server-only logic in **Pages Functions** and/or **Hono**; configure **D1**, **KV**, and **R2** in [Wrangler](https://developers.cloudflare.com/workers/wrangler/).
 
 **Add from the template only when a feature needs it:** ApexCharts, FullCalendar, Swiper, SimpleBar, Flatpickr, Prism, drag-and-drop, file upload, Floating UI widgets, etc. A lean marketing site may omit most of these initially.
 
