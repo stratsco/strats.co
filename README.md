@@ -2,6 +2,8 @@
 
 Site source for [strats.co](https://strats.co). **TypeScript** end to end.
 
+**Repository:** One GitHub repo for everything—Astro site, Hono `/api/*`, and any other pieces (e.g. a Discord bot) as separate **deployables** in-tree with separate CI jobs if needed, not separate repos.
+
 ## Architecture (default)
 
 | Piece | Choice |
