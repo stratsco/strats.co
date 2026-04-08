@@ -1,0 +1,7 @@
+# Copy to `.dev.vars` for `wrangler dev` / local Pages Functions.
+# Same KEY names as `.env.example` (Discord + internal). Do not commit `.dev.vars`.
+
+DISCORD_APPLICATION_ID=
+DISCORD_PUBLIC_KEY=
+DISCORD_BOT_TOKEN=
+# STRATS_INTERNAL_API_SECRET=

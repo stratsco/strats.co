@@ -32,3 +32,11 @@ Discord exposes two main integration shapes—plan for **both** up front so we d
 **UI reference:** **TailAdmin React Pro** (React + Tailwind v4 dashboard kit) — reuse components/tokens; do not treat it as the site shell.
 
 **Tooling:** ESLint + typescript-eslint, strict TS. Use Astro/Vite/Node versions that match Cloudflare’s [supported runtimes](https://developers.cloudflare.com/workers/runtime-apis/nodejs/).
+
+## Environment variables
+
+- **`.env.example`** — full list of keys; copy to **`.env`** for local Astro/Vite/scripts.
+- **`.dev.vars.example`** — copy to **`.dev.vars`** for **[Wrangler](https://developers.cloudflare.com/workers/wrangler/)** local dev (Pages/Worker env). Same secret names as above; `.dev.vars` is gitignored.
+- **Deployed:** `wrangler secret put <NAME>` (and [Pages project env](https://developers.cloudflare.com/pages/configuration/build-configuration/#environment-variables) for build-time vars). Never commit real values.
+
+**Cloudflare in Cursor:** use **Wrangler** in the terminal (`wrangler login`, `wrangler whoami`, `wrangler secret put …`). Use the **Cloudflare Bindings** MCP (accounts, D1, KV, R2, workers) and **Cloudflare Docs** MCP when wiring resources; **Workers Builds** / **Observability** MCPs when debugging deploys and logs.
