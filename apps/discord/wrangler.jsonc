@@ -1,0 +1,48 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "strats-discord",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-04-17",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "vars": {
+    "APP_ENV": "development",
+    "DISCORD_API_BASE": "https://discord.com/api/v10",
+    "ROLE_SYNC_STALE_MINUTES": "15"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "SESSIONS",
+      "id": "00000000000000000000000000000000"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "AUDIT_DB",
+      "database_name": "strats-audit",
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "queues": {
+    "producers": [
+      {
+        "binding": "ROLE_SYNC_QUEUE",
+        "queue": "strats-role-sync"
+      }
+    ],
+    "consumers": [
+      {
+        "queue": "strats-role-sync",
+        "max_batch_size": 10,
+        "max_batch_timeout": 30
+      }
+    ]
+  },
+  "triggers": {
+    "crons": ["*/30 * * * *"]
+  }
+}

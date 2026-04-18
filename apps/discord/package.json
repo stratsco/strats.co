@@ -1,0 +1,27 @@
+{
+  "name": "@strats/discord",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "build": "wrangler deploy --dry-run",
+    "deploy": "wrangler deploy",
+    "deploy:dry-run": "wrangler deploy --dry-run",
+    "cf:typegen": "wrangler types --env-interface DiscordEnv worker-configuration.d.ts",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node -e \"console.log('No discord tests yet')\""
+  },
+  "dependencies": {
+    "@strats/config": "workspace:*",
+    "@strats/domain": "workspace:*",
+    "hono": "^4.10.4",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260414.0",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.40.3"
+  }
+}
